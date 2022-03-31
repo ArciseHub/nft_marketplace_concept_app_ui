@@ -4,11 +4,18 @@ import 'package:nft_marketplace_concept_app_ui/screens/nft_offer_overview_screen
 import 'package:nft_marketplace_concept_app_ui/widgets/blur_container.dart';
 import 'package:nft_marketplace_concept_app_ui/widgets/info_tile.dart';
 
-class NFTScreen extends StatelessWidget {
+class NFTScreen extends StatefulWidget {
   const NFTScreen({Key? key, required this.image}) : super(key: key);
 
   final String image;
 
+  @override
+  State<NFTScreen> createState() => _NFTScreenState();
+}
+
+bool buttonTapped = false;
+
+class _NFTScreenState extends State<NFTScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +26,10 @@ class NFTScreen extends StatelessWidget {
           Stack(
             children: [
               Hero(
-                tag: image,
+                tag: widget.image,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(40),
-                  child: Image.asset(image),
+                  child: Image.asset(widget.image),
                 ),
               ),
               Positioned(
@@ -102,11 +109,15 @@ class NFTScreen extends StatelessWidget {
             intervalStart: 0.6,
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            NFTOfferOverviewScreen(image: image)));
+                Future.delayed(const Duration(milliseconds: 900), () {
+                  setState(() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                NFTOfferOverviewScreen(image: widget.image)));
+                  });
+                });
               },
               child: Container(
                 height: 50,

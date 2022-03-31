@@ -59,139 +59,157 @@ class NFTOfferOverviewScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 60),
-          Center(
-            child: Container(
-              height: 140,
-              width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 22, 22, 22),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          FadeAnimation(
+            intervalStart: 0.1,
+            child: Center(
+              child: Container(
+                height: 140,
+                width: MediaQuery.of(context).size.width * 0.9,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 22, 22, 22),
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: FadeAnimation(
+                    intervalStart: 0.25,
+                    child: Column(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Samuel',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Offered to you',
+                                  style: TextStyle(color: Colors.white70),
+                                ),
+                              ],
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(image, scale: 12.5),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 30),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Text(
-                              'Mehran',
+                              'Total amount',
+                              style: TextStyle(color: Colors.white70),
+                            ),
+                            Text(
+                              '8.24 ETH',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
-                              'Offered to you',
-                              style: TextStyle(color: Colors.white70),
-                            ),
                           ],
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(image, scale: 12.5),
-                        ),
                       ],
                     ),
-                    const SizedBox(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
-                          'Total amount',
-                          style: TextStyle(color: Colors.white70),
-                        ),
-                        Text(
-                          '8.24 ETH',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  'Fiat amount',
-                  style: TextStyle(color: Colors.white70),
-                ),
-                Text(
-                  '23,234.30 USD',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+            child: FadeAnimation(
+              intervalStart: 0.35,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Fiat amount',
+                    style: TextStyle(color: Colors.white70),
                   ),
-                ),
-              ],
+                  Text(
+                    '23,234.30 USD',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 22.5, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  'Order number',
-                  style: TextStyle(color: Colors.white70),
-                ),
-                Text(
-                  '393lf0F34l3eY1mq34Qz',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+            child: FadeAnimation(
+              intervalStart: 0.4,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Order number',
+                    style: TextStyle(color: Colors.white70),
                   ),
-                ),
-              ],
+                  Text(
+                    '393lf0F34l3eY1mq34Qz',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 22.5, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  'Network',
-                  style: TextStyle(color: Colors.white70),
-                ),
-                Text(
-                  'Binance smart chain',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+            child: FadeAnimation(
+              intervalStart: 0.45,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Network',
+                    style: TextStyle(color: Colors.white70),
                   ),
-                ),
-              ],
+                  Text(
+                    'Binance smart chain',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(Icons.account_balance_wallet,
-                        color: Colors.white, size: 30),
-                    SizedBox(width: 30),
-                    Icon(Icons.attach_money, color: Colors.white, size: 30),
-                  ],
-                ),
-                const ScaleScreenTransition(
-                  screenTransitionTo: NFTOfferSend(),
-                ),
-              ],
+            child: FadeAnimation(
+              intervalStart: 0.6,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: const [
+                      Icon(Icons.account_balance_wallet,
+                          color: Colors.white, size: 30),
+                      SizedBox(width: 30),
+                      Icon(Icons.attach_money, color: Colors.white, size: 30),
+                    ],
+                  ),
+                  const ScaleScreenTransition(
+                    screenTransitionTo: NFTOfferSend(),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
