@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nft_marketplace_concept_app_ui/animations/fade_animation.dart';
 import 'package:nft_marketplace_concept_app_ui/animations/scale_screen_transition.dart';
 import 'package:nft_marketplace_concept_app_ui/screens/nft_offer_send.dart';
-import 'package:nft_marketplace_concept_app_ui/widgets/blur_container.dart';
-import 'package:nft_marketplace_concept_app_ui/widgets/info_tile.dart';
 
 class NFTOfferOverviewScreen extends StatelessWidget {
   const NFTOfferOverviewScreen({Key? key, required this.image})
@@ -29,32 +27,6 @@ class NFTOfferOverviewScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                /* Positioned(
-                  bottom: 10,
-                  left: 10,
-                  child: FadeAnimation(
-                    intervalEnd: 0.1,
-                    child: BlurContainer(
-                      child: Container(
-                        height: 40,
-                        width: 160,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white.withOpacity(0.1),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Digital NFT Art',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ), */
               ],
             ),
           ),
